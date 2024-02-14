@@ -1,3 +1,5 @@
+/// Apply Transform Over Each Element in Array
+
 function randomArray(len) {
   return Array(len)
     .fill(0)
@@ -15,6 +17,7 @@ function checkPerformance(fn, array, callback) {
   return "Execution Time: " + executionTime.toFixed(2) + " ms";
 }
 
+/// Approach 1
 function main1() {
   function map(array, callback) {
     const newArray = [];
@@ -27,6 +30,7 @@ function main1() {
   return result;
 }
 
+/// Approach 2
 function main2() {
   function map(array, callback) {
     const newArray = [];
@@ -40,6 +44,7 @@ function main2() {
   return result;
 }
 
+/// Approach 3
 function main3() {
   function map(array, callback) {
     const n = array.length;
@@ -54,6 +59,7 @@ function main3() {
   return result;
 }
 
+/// Approach 4
 function main4() {
   function map(array, callback) {
     const n = array.length;
