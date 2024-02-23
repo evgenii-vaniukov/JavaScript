@@ -33,3 +33,16 @@ const pageNumber = 2; // Current page number
 const result = paginateArray(data, pageSize, pageNumber);
 
 console.log(result);
+
+/**
+ * @param {Function} fn
+ * @return {Object}
+ */
+Array.prototype.groupBy = function (fn) {
+  return this.reduce((accum, item) => {
+    const key = fn(item);
+    accum[key] ||= [];
+    accum[key].push(item);
+    return accum;
+  }, {});
+};
