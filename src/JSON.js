@@ -46,3 +46,12 @@ Array.prototype.groupBy = function (fn) {
     return accum;
   }, {});
 };
+
+let products = [
+  {name: "Apple", price: 1},
+  {name: "Banana", price: 0.5},
+  {name: "Cherry", price: 2},
+];
+
+products.sort((a, b) => a.name.localeCompare(b.name));
+console.log(products); // [{ name: 'Apple', price: 1 }, { name: 'Banana', price: 0.5 }, { name: 'Cherry', price: 2 }]
