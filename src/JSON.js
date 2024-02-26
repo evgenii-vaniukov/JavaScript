@@ -66,3 +66,11 @@ let priorityOrder = {Low: 1, Medium: 2, High: 3};
 
 tasks.sort((a, b) => priorityOrder[b.priority] - priorityOrder[a.priority]);
 console.log(tasks); // [{ title: 'Task 1', priority: 'Low' }, { title: 'Task 3', priority: 'Medium' }, { title: 'Task 2', priority: 'High' }]
+
+var sortBy = function (arr, fn) {
+  function swap(a, b) {
+    return fn(a) < fn(b) ? -1 : 1;
+  }
+
+  return arr.sort(swap);
+};
