@@ -55,3 +55,14 @@ let products = [
 
 products.sort((a, b) => a.name.localeCompare(b.name));
 console.log(products); // [{ name: 'Apple', price: 1 }, { name: 'Banana', price: 0.5 }, { name: 'Cherry', price: 2 }]
+
+let tasks = [
+  {title: "Task 1", priority: "Low"},
+  {title: "Task 2", priority: "High"},
+  {title: "Task 3", priority: "Medium"},
+];
+
+let priorityOrder = {Low: 1, Medium: 2, High: 3};
+
+tasks.sort((a, b) => priorityOrder[b.priority] - priorityOrder[a.priority]);
+console.log(tasks); // [{ title: 'Task 1', priority: 'Low' }, { title: 'Task 3', priority: 'Medium' }, { title: 'Task 2', priority: 'High' }]
